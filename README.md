@@ -1,7 +1,7 @@
 ## To run the app, clone stage 2 app and follow the below commands:
 ### 1.npm install<br>
 ### 2.npm start
-## Daywise track of Project
+## Daywise track of Project :
 ### Day0(6-9-20):
 1.Learned Hooks in react<br>
 2.Learned Redux drom very basics level.<br>
