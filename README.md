@@ -1,4 +1,4 @@
-#To run the app, clone stage 2 app and Follow commands:
+# To run the app, clone stage 2 app and Follow commands:
 ### *npm install
 ### *npm start
 ### Day0(6-9-20):
