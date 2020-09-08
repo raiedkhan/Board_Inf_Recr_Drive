@@ -1,8 +1,10 @@
-## To run the app, clone stage 2 app and Follow commands:
+## To run the app, clone stage 2 app and follow the below commands:
 ### 1.npm install<br>
 ### 2.npm start
 
 <hr>
+
+## Daywise track of Project
 
 ### Day0(6-9-20):
 1.Learned Hooks in react<br>
