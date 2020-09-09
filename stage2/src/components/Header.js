@@ -6,9 +6,16 @@ const { Title } = Typography;
 
 const Header = (props) => {
   return (
-    <div className='header-cont'>
-      <GithubOutlined className='github-icon' />
-      <Title className='heading'>GitHub Compare</Title>
+    <div>
+      <div className='personal-info'>
+            <h1>
+            Made by Raied Razi
+            </h1>
+        </div>
+      <div className='header-cont'>
+        <GithubOutlined className='github-icon' />
+        <Title className='heading'>GitHub Compare</Title>
+      </div>
     </div>
   );
 };
