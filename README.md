@@ -11,7 +11,7 @@
 2.Stage 2 app(Final app) built, all tasks performed smoothly
 ### Day2(8-9-20):
 1.Started Implementing the additional part asked in the problem statement.<br>
-2.Couldn't build the additional part.
+2.Couldn't build the additional part :(
 ### Day3(9-9-20)
-1.Styling and UI Upgradation done.<br>
+1.Styling and UI improvements done.<br>
 2.Heroku Initial Deployment Done.
