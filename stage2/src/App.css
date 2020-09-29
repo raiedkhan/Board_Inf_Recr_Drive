@@ -139,7 +139,15 @@ body {
 .property {
   font-size: 12px;
 }
-
+.close-button{
+  margin-left: 85%;
+  color:#D0D3D4;
+  border-radius: 50%;
+}
+.close-button:hover{
+  color:#7DCEA0;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
   .heading {
     padding: 1rem;

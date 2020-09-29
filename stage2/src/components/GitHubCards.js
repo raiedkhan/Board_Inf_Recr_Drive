@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card} from "antd";
+import {CloseCircleOutlined} from "@ant-design/icons"
 
 const GitHubCards = (props) => {
   const { data } = props;
   return (
     <div>   
-      <Card className='cards' title={data.login} style={{fontSize:20}} >
+      <Card className='cards' title={data.login} style={{fontSize:20}} extra={<CloseCircleOutlined className="close-button"/>}> 
         <div className='card-content'>
           <div className='avatar-cont'>
             <img src={data.avatar_url} alt='avatar' className='avatar' />
