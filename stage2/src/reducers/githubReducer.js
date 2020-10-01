@@ -1,6 +1,6 @@
 /* Reducer file to manage state */
 
-import { API_START, API_SUCCESS, API_FAIL } from "../constants";
+import { API_START, API_SUCCESS, API_FAIL, DEL_DATA } from "../constants";
 
 const initialState = {
   isLoading: false,
@@ -17,10 +17,11 @@ export default function (state = initialState, action) {
         isLoading: true,
       };
     case API_SUCCESS:
+      
       return {
         ...state,
         isLoading: false,
-        gitHubData: [...state.gitHubData, payload],
+        gitHubData: [...state.gitHubData.filter((dat)=>{return dat.id!==payload.id}), payload],
         error: null,
       };
     case API_FAIL:
@@ -29,6 +30,12 @@ export default function (state = initialState, action) {
         isLoading: false,
         error: payload,
       };
+    case DEL_DATA:
+      const newData=state.gitHubData.filter((dat)=>{return(dat.id!==payload)})
+      return {
+        ...state,
+        gitHubData:newData
+      }
     default:
       return state;
   }

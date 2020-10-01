@@ -2,12 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Card} from "antd";
 import {CloseCircleOutlined} from "@ant-design/icons"
-
+import { connect } from "react-redux";
+import { delGitHubData } from "../actions/githubActions";
 const GitHubCards = (props) => {
+  //const { delGitHubData } = props;
   const { data } = props;
+  const onClickCross=()=>{
+    props.delGitHubData(data.id);
+  }
   return (
     <div>   
-      <Card className='cards' title={data.login} style={{fontSize:20}} extra={<CloseCircleOutlined className="close-button"/>}> 
+      <Card className='cards' title={data.login} style={{fontSize:20}} extra={<CloseCircleOutlined onClick={onClickCross} className="close-button"/>}> 
         <div className='card-content'>
           <div className='avatar-cont'>
             <img src={data.avatar_url} alt='avatar' className='avatar' />
@@ -47,5 +52,12 @@ GitHubCards.defaultProps = {
 GitHubCards.propTypes = {
   data: PropTypes.object,
 };
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    delGitHubData:(id)=>{
+      dispatch(delGitHubData(id))
+    }
+  }
+}
+export default connect(null,mapDispatchToProps)(GitHubCards);
 
-export default GitHubCards;
