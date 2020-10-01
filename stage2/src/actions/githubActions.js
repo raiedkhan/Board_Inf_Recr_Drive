@@ -1,5 +1,5 @@
 /* File for action creators */
-import { API_START, API_SUCCESS, API_FAIL } from "../constants";
+import { API_START, API_SUCCESS, API_FAIL,DEL_DATA } from "../constants";
 import axios from "axios";
 
 export const apiStart = () => {
@@ -11,6 +11,7 @@ export const getGitHubData = (data) => async (dispatch) => {
   setTimeout(async () => {
     try {
       const res = await axios.get(`https://api.github.com/users/${data}`);
+      console.log(res.data);
       dispatch({
         type: API_SUCCESS,
         payload: res.data,
@@ -20,3 +21,9 @@ export const getGitHubData = (data) => async (dispatch) => {
     }
   }, 2000);
 };
+export const delGitHubData=(id)=>{
+  return {
+    type: DEL_DATA,
+    payload: id
+  };
+}
